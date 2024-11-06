@@ -1,5 +1,5 @@
-import {Router} from "express";
-import suspeitosRoutes from "./suspeitosRoutes.js";
+import  {Router } from "express";
+import suspeitosRoutes from "./suspeitos.routes.js";
 
 const routes = Router();
 
