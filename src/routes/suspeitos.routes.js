@@ -52,7 +52,8 @@ suspeitosRoutes.post("/", (req, res) => {
     //Validação envolvimento;
     if (
         envolvimento.toLowerCase() != "sim" &&
-        envolvimento.toLowerCase() != "não"
+        envolvimento.toLowerCase() != "não" &&
+        envolvimento.toLowerCase() != ""
     ) {
         return res.status(400).send({
             message:
