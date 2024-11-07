@@ -66,5 +66,22 @@ suspeitosRoutes.post("/", (req ,res) => {
     });
 });
 
+suspeitosRoutes.delete ("/:id", (req, res) => {
+    const { id } = req.params;
+
+    const suspeito = suspeitos.find((suspect) => suspect.id == id);
+
+    if (!suspeito) {
+        return res.status(404).send ({
+            message: "Suspeito não encontrado."
+        });
+    };
+
+    suspeitos = suspeitos.filter ((suspect) => suspect.id != id);
+    return res.status(200).send ({
+        message: `O suspeito foi deletado`,
+        suspeito,
+    });
+});
 
 export default suspeitosRoutes;
