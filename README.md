@@ -1,76 +1,100 @@
- # - Sistema de Cadastro de Suspeitos Envolvidos em Lavagem de Dinheiro no Jogo de Apostas
-  ## Contexto
-Este projeto foi desenvolvido para atender a uma solicitação da Polícia Federal, com o objetivo de criar um sistema para o cadastro de suspeitos famosos envolvidos em esquemas de lavagem de dinheiro através de apostas. O sistema permite que os agentes da polícia realizem operações de cadastro, atualização, listagem e exclusão de suspeitos, além de verificar seu nível de envolvimento em atividades ilícitas.
+# Suspect Registration System for Money Laundering Involved in Betting Games 🚓 ( Fictício ) 
 
-### O sistema atende aos seguintes requisitos:
+## Context 
+This project was developed to meet a request from the Federal Police, with the goal of creating a system for the registration of famous suspects involved in money laundering schemes through betting games.
 
-#### Cadastrar Suspeitos:
-##### Informações obrigatórias: nome, profissão, envolvimento em apostas (sim/não) e nível de suspeita (baixo, médio, alto).
-##### Validação: Nome e profissão são obrigatórios. O nível de suspeita deve ser classificado como "baixo", "médio" ou "alto".
+##  Used Languages in this Repository
 
-#### Listar Suspeitos:
-##### Listar todos os suspeitos cadastrados, com seus respectivos níveis de suspeita.
+ - ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+ - ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+ - ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)  
+ - ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)  
 
-#### Buscar Suspeito Específico:
-##### Buscar um suspeito específico pelo seu ID.
 
-#### Atualizar Suspeito:
-##### Atualizar as informações de um suspeito específico, exceto o ID.
-##### Validação: As mesmas regras de cadastro devem ser aplicadas.
+### 👩‍💻 The system meets the following requirements: 
 
-#### Excluir Suspeito:
-##### Excluir um suspeito específico do sistema, buscando-o pelo ID.
+#### Register Suspects: 🏃‍♂️
+- **Mandatory Information**: Name, profession, involvement in betting (yes/no), and suspicion level (low, medium, high).
+- **Validation**: Name and profession are mandatory. The suspicion level must be classified as "low", "medium", or "high".
 
-### Instruções
-#### Para utilizado no Postman se atente as Rotas:
+#### List Suspects: 👮‍♂️
+- List all registered suspects with their respective suspicion levels.
 
-##### Rotas específicas para cada funcionalidade:
+#### Search Specific Suspect: 🕵️‍♀️
+- Search for a specific suspect by their ID.
 
-POST /suspeitos - Cadastrar um novo suspeito.
-GET /suspeitos - Listar todos os suspeitos.
-GET /suspeitos/:id - Buscar um suspeito específico pelo ID.
-PUT /suspeitos/:id - Atualizar informações de um suspeito.
-DELETE /suspeitos/:id - Remover um suspeito do sistema.
-Escolha os Métodos de Requisição:
+#### Update Suspect: 🏃‍♀️
+- Update the information of a specific suspect, except the ID.
+- **Validation**: The same registration rules must be applied.
 
-POST: Para cadastrar um novo suspeito.
-GET: Para listar e buscar suspeitos.
-PUT: Para atualizar informações de um suspeito.
-DELETE: Para remover um suspeito.
-Validação:
+#### Delete Suspect: 🧍‍♂️
+- Delete a specific suspect from the system by their ID.
 
-Verifique se todos os campos obrigatórios (nome, profissão e nível de suspeita) estão preenchidos.
-O envolvimento em apostas deve ser "sim" ou "não", e o nível de suspeita deve ser "baixo", "médio" ou "alto".
-Códigos de Status HTTP:
+### Instructions 
+#### To use with Postman, pay attention to the Routes: 🗺️
 
-200 OK: Operações de listagem, busca, atualização e exclusão bem-sucedidas.
-201 Created: Suspeito cadastrado com sucesso.
-400 Bad Request: Erro de validação (ex: campos obrigatórios não preenchidos).
-404 Not Found: Suspeito não encontrado.
-500 Internal Server Error: Erros inesperados no servidor.
+##### Specific routes for each functionality:
 
-### Como Executar o Projeto
+- **POST /suspects** - Register a new suspect.
+- **GET /suspects** - List all suspects.
+- **GET /suspects/:id** - Search for a specific suspect by ID.
+- **PUT /suspects/:id** - Update a suspect's information.
+- **DELETE /suspects/:id** - Remove a suspect from the system.
 
-##### Clone o repositório:
+Choose the Request Methods:
 
-git clone <url-do-repositorio>
+- **POST**: To register a new suspect.
+- **GET**: To list and search suspects.
+- **PUT**: To update a suspect's information.
+- **DELETE**: To remove a suspect.
 
-##### Navegue até o diretório do projeto:
+**Validation**: 🚨
 
-cd <nome-do-diretorio>
+- Ensure all mandatory fields (nome, profissao, and nivelSuspeita) are filled.
+- Involvement in betting must be "sim" or "não", and the suspicion level must be "baixo", "médio", or "alto".
 
-###### Instale as dependências:
+**HTTP Status Codes**: 🖥️
 
+- ✔️ **200 OK**: Successful listing, search, update, and deletion operations.
+- ✔️ **201 Created**: Suspect successfully registered.
+- ❌ **400 Bad Request**: Validation error (e.g., mandatory fields not filled).
+- ❌ **404 Not Found**: Suspect not found.
+- ❌ **500 Internal Server Error**: Unexpected server errors.
+
+### How to Run the Project 🏠 💻
+
+1. **Clone the repository**:
+```bash
+git clone https://github.com/viniciusValverde1410/atividadebets
+```
+   
+Navigate to the project directory:
+
+ ```bash
+cd <directory-name>
+```
+
+Install the dependencies:
+
+ ```bash
 npm install
+````
 
-###### Inicie o servidor:
+Start the server:
 
+ ```bash
 npm run dev
+```
 
-###### E crie o arquivo dotenv com a porta 4000
+Create the dotenv file with port 4000:
+Create a file named .env in the root of your project and add the following content:
 
-.env 
+  ``` plaintext
+
 PORT=4000
 
-### Agora está pronto para a utilização!
-#### Lembre-se de sempre se atentar ao endereço e as rotas.
+```
+
+# Now you're ready to use it! 👮‍♂️🕵️‍♀️🚓
+
+## Always pay attention to the address and routes  👩‍💻
