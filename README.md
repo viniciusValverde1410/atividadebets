@@ -57,7 +57,7 @@ Choose the Request Methods:
 
 - ✔️ **200 OK**: Successful listing, search, update, and deletion operations.
 - ✔️ **201 Created**: Suspect successfully registered.
-- ❌ **400 Bad Request**: Validation error (e.g., mandatory fields not filled).
+- ❌ **400 Bad Request**: Validation error.
 - ❌ **404 Not Found**: Suspect not found.
 - ❌ **500 Internal Server Error**: Unexpected server errors.
 
